@@ -1,0 +1,46 @@
+body {
+    height: 300vh;
+    background-color: aliceblue;
+}
+
+h1 {
+    color: darkblue;
+    font-size: 2em;
+    margin: 30px 0;
+    text-decoration: underline;
+
+}
+
+.ek {
+    width: 25vw;
+    height: 25vh;
+    box-shadow: 0 0 10px gray;
+
+
+}
+
+.vk {
+    width: 25vw;
+    height: 25vh;
+    box-shadow: 0 0 10px gray;
+
+}
+
+.mdl-button mdl-js-button mdl-button--raised mdl-button--colored {
+    background-color: red;
+}
+
+a {
+    color: blue;
+
+
+}
+
+.update {
+    color: rgba(46, 35, 145, 0.36);
+}
+
+.beschreibung {
+    background: url(https://coaching-persoenlichkeitsentwicklung.ch/wp-content/uploads/2020/04/gewinn_oder_verlust_AdobeStock_165876185.jpg) center / cover;
+    box-shadow: 0 0 10px gray;
+}

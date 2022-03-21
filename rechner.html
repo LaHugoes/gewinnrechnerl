@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Unternehmensrechner</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="rechner.css">
+
+</head>
+
+<body>
+<center>
+<h1>Unternehmensrechner</h1>
+    <div class="beschreibung">
+    <p>Berechnen Sie jetzt Ihren Gewinn!</p>
+    <p class="update">
+        Ihr Rechner ist kostenlos und 24/7 einsatzbereit.
+        <br>[Update: Der Rechner für Netto ist in Arbeit]
+    </p>
+    </div>
+<div class="ek">
+    <p>Gib dein Verkaufspreis ein! (<a href="https://de.wikipedia.org/wiki/Mehrwertsteuer"target="_blank">MwSt</a>./Brutto)</p>
+    <!-- Numeric Textfield -->
+    <form action="#">
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="tfEK">
+            <label class="mdl-textfield__label" for="tfEK">VK</label>
+            <span class="mdl-textfield__error">Gib eine Zahl ein!</span>
+        </div>
+    </form>
+</div>
+<div class="vk">
+    <p>Gib dein Einkaufspreis ein!</p>
+    <!-- Numeric Textfield -->
+    <form action="#">
+        <div class="mdl-textfield mdl-js-textfield">
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="tfVK">
+            <label class="mdl-textfield__label" for="tfVK">EK</label>
+            <span class="mdl-textfield__error">Gib eine Zahl ein!</span>
+        </div>
+    </form>
+</div>
+    <!-- Colored raised button -->
+    <div class="button">
+    <button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" onclick="tfAuslesen()">
+        Klicke
+    </button>
+    <p>Dein Gewinn (Brutto) beträgt:</p> <p id="ausgabe"> </p>
+    </div>
+</center>
+</body>
+
+</html>
