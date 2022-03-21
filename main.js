@@ -1,8 +1,13 @@
-let eingabeFelder = ['tfVK','tfEK',]
+let eingabeFelder = ['tfEK','tfVK',]
 let preis = [];
 let differenz = 0;
 let ergebnis;
 let aktuelleEingabe;
+
+const Eingaben = {
+    Sell: 0,
+    Buy: 0
+}
 
 //ließt textfelder aus und brechnet die Differenz nach eingabenüberprüfung
 
@@ -18,12 +23,14 @@ function tfAuslesen() {
     for (let i = 0; i < eingabeFelder.length; i = i + 1) {
         aktuelleEingabe = parseInt(document.getElementById(eingabeFelder[i]).value);
         eingabeUeberpruefen(aktuelleEingabe);
+        // console.log(Eingaben[`${Object.keys(Eingaben)[i]}`]);
+        Eingaben[`${Object.keys(Eingaben)[i]}`] = aktuelleEingabe;
 
         //überprüfung + dass i variable ist
 
     }
-
-    ergebnis = tfVK - tfEK;
+    // console.log(Eingaben);
+    ergebnis = Eingaben.Sell - Eingaben.Buy;
 
     document.getElementById("ausgabe").innerHTML = ergebnis;
 // bei ausgabe wird ergebnis angezeigt
@@ -41,6 +48,7 @@ function tfAuslesen() {
         }
     }//anzeigen der farben bei bestimmten intervall
 }
+
 function eingabeUeberpruefen(punkte) {
     if (isNaN(punkte)) {
         console.log("Keine Zahl");
